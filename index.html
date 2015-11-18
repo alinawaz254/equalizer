@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/main.css" /> <!-- This is a css file for this page, you can remove it-->
+		<link rel="stylesheet" href="css/jquery.equalizer.css" />
+	</head>
+	<body>
+		
+		<section id="main_section">
+			
+			
+			<div class="relative_left" style="width: 800px;margin: 30px 0px;height: 300px;left : 50%;margin-left: -300px;">
+				<h2 id="title">jQuery Audio Equalizer Animation</h2>
+
+				<p>
+					<div class="song1 equalizer"></div>
+					<audio controls loop id="song1">
+						<source src="music/file.mp3" type='audio/ogg'>
+					</audio>
+				<p>
+
+				<p>
+					<div class="song2 equalizer"></div>
+					<audio controls loop id="song2">
+						<source src="music/file.mp3" type='audio/ogg'>
+					</audio>
+				</p>
+				
+    		</div>
+		</section>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.reverseorder.js"></script>
+		<script type="text/javascript" src="js/jquery.equalizer.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#song1').equalizer({
+					color: "#f2b400",
+					color1: '#a94442',
+					color2: '#f2b400'
+				});
+				$('#song2').equalizer();
+			});
+		</script>
+	</body>
+</html>
